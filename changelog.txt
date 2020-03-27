@@ -1,0 +1,5 @@
+Added light toggle sounds which play when a belt light or lantern is switched on or off.
+Added 'autotrack' as an alias; which, when used, will toggle on and off the automatic walking of directions when using find or track in game.
+Started implementing support for when someone follows someone else.
+Added the following keys to control the volumes in the game: F7 - selects one of three volumes to adjust; F5 - lowers selected volume by five points; F6 raises selected volume by five points.
+Added the hotkey Ctrl+Enter to power up your attack.
