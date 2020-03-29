@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Saturday, March 28, 2020, 6:05 PM -->
+<!-- MuClient version 5.06-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "auto_retyping". World: "inferno". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.06-pre"
+   world_file_version="15"
+   date_saved="2020-03-28 18:05:39"
+  >
+  <variable name="autort">1</variable>
+</variables>
+</muclient>

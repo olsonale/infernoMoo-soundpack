@@ -1,0 +1,128 @@
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:15 AM ---
+
+Run-time error
+Plugin: AlterAeon (called from world: alter aeon)
+Immediate execution
+[string "Plugin: AlterAeon"]:153: attempt to compare number with nil
+stack traceback:
+	[string "Plugin: AlterAeon"]:153: in main chunk
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:16 AM ---
+
+Run-time error
+Plugin: LuaAudio (called from world: alter aeon)
+Function/Sub: OnPluginInstall called by Plugin LuaAudio
+Reason: Executing plugin LuaAudio sub OnPluginInstall
+[string "Plugin: LuaAudio"]:344: The specified module could not be found.
+
+stack traceback:
+	[C]: in function 'assert'
+	[string "Plugin: LuaAudio"]:344: in function <[string "Plugin: LuaAudio"]:343>
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:16 AM ---
+
+Run-time error
+Plugin: AlterAeon (called from world: alter aeon)
+Immediate execution
+[string "Plugin: AlterAeon"]:153: attempt to compare number with nil
+stack traceback:
+	[string "Plugin: AlterAeon"]:153: in main chunk
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:17 AM ---
+
+Run-time error
+Plugin: LuaAudio (called from world: alter aeon)
+Function/Sub: OnPluginClose called by Plugin LuaAudio
+Reason: Executing plugin LuaAudio sub OnPluginClose
+[string "Plugin: LuaAudio"]:358: attempt to index global 'audio' (a nil value)
+stack traceback:
+	[string "Plugin: LuaAudio"]:358: in function <[string "Plugin: LuaAudio"]:356>
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:19 AM ---
+
+Run-time error
+Plugin: LuaAudio (called from world: alter aeon)
+Function/Sub: OnPluginInstall called by Plugin LuaAudio
+Reason: Executing plugin LuaAudio sub OnPluginInstall
+[string "Plugin: LuaAudio"]:344: The specified module could not be found.
+
+stack traceback:
+	[C]: in function 'assert'
+	[string "Plugin: LuaAudio"]:344: in function <[string "Plugin: LuaAudio"]:343>
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:19 AM ---
+
+Run-time error
+Plugin: AlterAeon (called from world: alter aeon)
+Immediate execution
+[string "Plugin: AlterAeon"]:153: attempt to compare number with nil
+stack traceback:
+	[string "Plugin: AlterAeon"]:153: in main chunk
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:19 AM ---
+
+Run-time error
+Plugin: plugin_instance_manager (called from world: alter aeon)
+Immediate execution
+[string "Plugin: plugin_instance_manager"]:177: module 'lua_table' not found:
+	no field package.preload['lua_table']
+	no file '.\lua_table.lua'
+	no file 'D:\Games\MUSHclient\lua\lua_table.lua'
+	no file 'D:\Games\MUSHclient\lua\lua_table\init.lua'
+	no file 'D:\Games\MUSHclient\lua_table.lua'
+	no file 'D:\Games\MUSHclient\lua_table\init.lua'
+	no file '.\lua_table.dll'
+	no file 'D:\Games\MUSHclient\lua_table.dll'
+	no file 'D:\Games\MUSHclient\loadall.dll'
+stack traceback:
+	[C]: in function 'require'
+	[string "Plugin: plugin_instance_manager"]:177: in main chunk
+
+
+--- Scripting error on Wednesday, February 13, 2019, 12:19 AM ---
+
+Run-time error
+Plugin: LuaAudio (called from world: alter aeon)
+Function/Sub: OnPluginClose called by Plugin LuaAudio
+Reason: Executing plugin LuaAudio sub OnPluginClose
+[string "Plugin: LuaAudio"]:358: attempt to index global 'audio' (a nil value)
+stack traceback:
+	[string "Plugin: LuaAudio"]:358: in function <[string "Plugin: LuaAudio"]:356>
+
+
+--- Scripting error on Thursday, August 22, 2019, 11:48 AM ---
+
+Run-time error
+Plugin: AlterAeon (called from world: alter aeon)
+Immediate execution
+[string "Plugin: AlterAeon"]:153: attempt to compare number with nil
+stack traceback:
+	[string "Plugin: AlterAeon"]:153: in main chunk
+
+
+--- Scripting error on Thursday, August 22, 2019, 11:48 AM ---
+
+Run-time error
+Plugin: plugin_instance_manager (called from world: alter aeon)
+Immediate execution
+[string "Plugin: plugin_instance_manager"]:177: module 'lua_table' not found:
+	no field package.preload['lua_table']
+	no file '.\lua_table.lua'
+	no file 'D:\Games\MUSHclient\lua\lua_table.lua'
+	no file 'D:\Games\MUSHclient\lua\lua_table\init.lua'
+	no file 'D:\Games\MUSHclient\lua_table.lua'
+	no file 'D:\Games\MUSHclient\lua_table\init.lua'
+	no file '.\lua_table.dll'
+	no file 'D:\Games\MUSHclient\lua_table.dll'
+	no file 'D:\Games\MUSHclient\loadall.dll'
+stack traceback:
+	[C]: in function 'require'
+	[string "Plugin: plugin_instance_manager"]:177: in main chunk

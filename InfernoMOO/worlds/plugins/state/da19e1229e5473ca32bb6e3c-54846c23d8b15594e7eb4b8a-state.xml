@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Wednesday, February 13, 2019, 12:12 AM -->
+<!-- MuClient version 5.06-pre -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+
+<!-- Plugin state saved. Plugin: "output_functions". World: "penis". -->
+
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="5.06-pre"
+   world_file_version="15"
+   date_saved="2019-02-13 00:12:21"
+  >
+  <variable name="output">1</variable>
+</variables>
+</muclient>
