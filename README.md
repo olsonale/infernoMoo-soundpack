@@ -3,7 +3,7 @@
 This is a soundpack for [InfernoMOO](https://www.mudconnect.com/cgi-bin/search.cgi?mode=mud_listing&mud=InfernoMOO) written for the [MUSHclient](http://www.gammon.com.au/downloads/dlmushclient.htm) MUD client, developed by the InfernoMOO BOTA corporation.
 
 * [ChangeLog](ChangeLog.md)
-* [Installation and Use](installation-and-use)
+* [Installation and Use](#installation-and-use)
 * [Keystrokes](#keystrokes)
 * [Help and Support](#help-and-support)
 * [Credits](#credits)
@@ -27,7 +27,7 @@ To launch the client, locate and execute MUSHclient.exe. The Inferno world will 
 
 ## Help and Support
 
-If you encounter any bugs while using the soundpack (or have a suggested change/addition), please open an issue on GitHub. Please be as detailed and verbose as possible, so that we can better troubleshoot potential problems or more accuratly implement your suggestion.
+If you encounter any bugs while using the soundpack (or have a suggested change/addition), please open an issue on GitHub. Please be as detailed and verbose as possible, so that we can better troubleshoot potential problems or more accurately implement your suggestion.
 If you end up making any fixes to open bugs (or implementing open suggestions), please feel free to submit them as pull requests so that they can be reviewed and potentially merged. Please do not submit pull requests for unopened issues; they will be ignored.
 
 ## Credits
