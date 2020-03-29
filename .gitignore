@@ -2,3 +2,5 @@
 
 #State-related files
 InfernoMOO/worlds/plugins/state/*.xml
+# MUSHclient SQLite preferences database
+InfernoMOO/mushclient_prefs.sqlite
