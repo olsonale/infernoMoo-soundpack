@@ -1,4 +1,4 @@
 # .gitignore
 
 #State-related files
-InfernoMOO/worlds/plugins/state/*
+InfernoMOO/worlds/plugins/state/*.xml
