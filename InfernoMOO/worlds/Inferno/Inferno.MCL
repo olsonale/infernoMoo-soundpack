@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Saturday, March 28, 2020, 7:24 PM -->
+<!-- Saved on Sunday, March 29, 2020, 2:15 AM -->
 <!-- MuClient version 5.06-pre -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -61,7 +61,6 @@
    input_font_weight="400"
    input_text_colour="black"
    keypad_enable="y"
-   line_information="y"
    log_output="y"
    max_output_lines="5000"
    mud_can_change_link_colour="y"
@@ -98,7 +97,7 @@
    use_default_output_font="y"
    warn_if_scripting_inactive="y"
    wrap="y"
-   wrap_column="80"
+   wrap_column="500"
    write_world_name_to_log="y"
    > <!-- end of general world attributes -->
 
@@ -109,7 +108,7 @@
 <triggers
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 </triggers>
 
@@ -118,7 +117,7 @@
 <aliases
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 </aliases>
 
@@ -127,7 +126,7 @@
 <timers
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 </timers>
 
@@ -136,7 +135,7 @@
 <macros
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 
   <macro name="up" type="send_now" >
@@ -230,7 +229,7 @@
 <variables
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 </variables>
 
@@ -239,7 +238,7 @@
 <colours
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 
 <ansi>
@@ -296,7 +295,7 @@
 <keypad
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 
   <key name="0" >
@@ -410,7 +409,7 @@
 <printing
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-28 19:24:19"
+   date_saved="2020-03-29 02:15:04"
   >
 
 <ansi>
