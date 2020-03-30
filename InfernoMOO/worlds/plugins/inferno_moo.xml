@@ -283,21 +283,21 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[(.+)\] (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
+   match="^\[chatnet\] (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
 omit_from_output="y"
    regexp="y"
    send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/chatnet.ogg",0,0,Gv)
-if "%4"=="" then
-   Execute("history_add all=[chatnet] %2 %6 the channel.")
-   Execute("history_add chatnet=%2 %6 the channel.")
-   Note("[chatnet] %2 %6 the channel.")
+if "%3"=="" then
+   Execute("history_add all=[chatnet] %1 %5 the channel.")
+   Execute("history_add chatnet=%1 %5 the channel.")
+   Note("[chatnet] %1 %5 the channel.")
   else
-   Execute("history_add all=[chatnet] %2: %5")
-   Execute("history_add chatnet=%2: %5")
-   Note("[chatnet] %2: %5")
+   Execute("history_add all=[chatnet] %1: %4")
+   Execute("history_add chatnet=%1: %4")
+   Note("[chatnet] %1: %4")
 end </send>
   </trigger>
   <trigger
