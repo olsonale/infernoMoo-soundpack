@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE muclient>
-<!-- Saved on Sunday, March 29, 2020, 2:15 AM -->
+<!-- Saved on Sunday, March 29, 2020, 7:57 PM -->
 <!-- MuClient version 5.06-pre -->
 <!-- Written by Nick Gammon -->
 <!-- Home Page: http://www.mushclient.com/ -->
@@ -8,7 +8,7 @@
 <world
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
 
    auto_say_override_prefix="-"
    auto_say_string="say "
@@ -41,7 +41,6 @@
    default_trigger_sequence="100"
    default_alias_sequence="100"
    detect_pueblo="y"
-   display_my_input="y"
    echo_hyperlink_in_output_window="y"
    edit_script_with_notepad="y"
    enable_aliases="y"
@@ -108,7 +107,7 @@
 <triggers
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 </triggers>
 
@@ -117,7 +116,7 @@
 <aliases
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 </aliases>
 
@@ -126,7 +125,7 @@
 <timers
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 </timers>
 
@@ -135,7 +134,7 @@
 <macros
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 
   <macro name="up" type="send_now" >
@@ -229,7 +228,7 @@
 <variables
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 </variables>
 
@@ -238,7 +237,7 @@
 <colours
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 
 <ansi>
@@ -295,7 +294,7 @@
 <keypad
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 
   <key name="0" >
@@ -409,7 +408,7 @@
 <printing
    muclient_version="5.06-pre"
    world_file_version="15"
-   date_saved="2020-03-29 02:15:04"
+   date_saved="2020-03-29 19:57:07"
   >
 
 <ansi>
@@ -434,7 +433,6 @@
 </printing>
 
 <!-- plugins -->
-<include name="auto_retyping.xml" plugin="y" />
 <include name="Current_Output_Window.xml" plugin="y" />
 <include name="channel_history.xml" plugin="y" />
 <include name="MushReader.xml" plugin="y" />
@@ -442,5 +440,6 @@
 <include name="Omit_Blank_Lines.xml" plugin="y" />
 <include name="Copy_Output.xml" plugin="y" />
 <include name="LuaAudio.xml" plugin="y" />
+<include name="auto_retyping.xml" plugin="y" />
 <include name="inferno_moo.xml" plugin="y" />
 </muclient>
