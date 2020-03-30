@@ -94,13 +94,22 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="[ * ] [s]:*"
-   send_to="12"
+   match="^\[ (.+) \] \[s\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+   omit_from_output="y"
+regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/shopkeep.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add shopkeep=%0")</send>
+if "%4"=="" then
+Execute("history_add all=[shopkeeps] %2 %6 the channel.")
+Execute("history_add shopkeeps=%2 %6 the channel.")
+Note("[shopkeeps] %2 %6 the channel.")
+else
+Execute("history_add all=shopkeeps %2: %5")
+Execute("history_add shopkeeps=%2: %5")
+Note("[shopkeeps] %2: %5")
+end</send>
   </trigger>
   <trigger
    enabled="y"
@@ -156,13 +165,14 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="[zotnet]*"
+   match="^\[zotnet\] (.+) says, \&quot;(.*)\&quot;$"
+   regexp="y"
    send_to="12"
    sequence="100"
   >
   <send>ppi.play(path.."com/zot.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add zot=%0")</send>
+Execute("history_add all=zotnet %1: %2")
+Execute("history_add zotnet=%1: %2")</send>
   </trigger>
   <trigger
    enabled="y"
@@ -195,13 +205,22 @@ ppi.play(path.."npcs/%4/grunts/"..math.random(1,4)..".ogg",0,0,Gv)</send>
   <trigger
    enabled="y"
    group="com"
-   match="[ * ] [m]:*"
-   send_to="12"
+   match="^\[ (.+) \] \[m\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+omit_from_output="y"
+regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/manager.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add manager=%0")</send>
+  if "%4"=="" then
+   Execute("history_add all=[managers] %2 %6 the channel.")
+   Execute("history_add managers=%2 %6 the channel.")
+Note("[managers] %2 %6 the channel.")
+  else
+   Execute("History_add all=[managers] %2: %5")
+   Execute("history_add managers=%2: %5")
+Note("[managers] %2: %5")
+end </send>
   </trigger>
   <trigger
    enabled="y"
@@ -264,13 +283,22 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="[chatnet]*"
-   send_to="12"
+   match="^\[(.+)\] (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
+omit_from_output="y"
+   regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/chatnet.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add chatnet=%0")</send>
+if "%4"=="" then
+   Execute("history_add all=[chatnet] %2 %6 the channel.")
+   Execute("history_add chatnet=%2 %6 the channel.")
+   Note("[chatnet] %2 %6 the channel.")
+  else
+   Execute("history_add all=[chatnet] %2: %5")
+   Execute("history_add chatnet=%2: %5")
+   Note("[chatnet] %2: %5")
+end </send>
   </trigger>
   <trigger
    group="gagged"
@@ -912,13 +940,16 @@ ppi.play(path.."npcs/%2/power.ogg",0,0,Gv)</send>
   <trigger
    enabled="y"
    group="com"
-   match="On your wristpad radio:*"
-   send_to="12"
+   match="^On your wristpad radio:(.*)$"
+omit_from_output="y"
+regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/radio.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add radio=%0")</send>
+Execute("history_add all=[radio] %1")
+Execute("history_add radio=%1")
+Note("[radio]%1") </send>
   </trigger>
   <trigger
    enabled="y"
@@ -1206,13 +1237,16 @@ ppi.play(path.."combat/blade/fury4.ogg",0,0,Gv)</send>
   <trigger
    enabled="y"
    group="com"
-   match="From * wristpad: * pages, *"
-   send_to="12"
+   match="^From (.*) wristpad: (.*) pages, (.*)"
+omit_from_output="y"
+regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/page.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add page=%0")</send>
+Execute("history_add all=page from %2: %3")
+Execute("history_add page=from %2: %3")</send>
+Note("page from %2: %3")
   </trigger>
   <trigger
    enabled="y"
@@ -1324,13 +1358,14 @@ ppi.play(path.."combat/gun/5.ogg",0,0,Gv)</send>
   <trigger
    enabled="y"
    group="com"
-   match="*tradenet]*"
+   match="^\[tradenet\] (.+) says, \&quot;(.*)\&quot;$"
+regexp="y"
    send_to="12"
    sequence="100"
   >
   <send>ppi.play(path.."com/tradenet.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add tradenet=%0")</send>
+Execute("history_add all=[tradenet] %1: %2")
+Execute("history_add tradenet=%1: %2")</send>
   </trigger>
   <trigger
    enabled="y"
@@ -5795,13 +5830,22 @@ ppi.play(path.."npcs/%4/grunts/"..math.random(2,4)..".ogg",0,0,Gv)</send>
   <trigger
    enabled="y"
    group="com"
-   match="[ * ] [h]:*"
-   send_to="12"
+   match="^\[ (.+) \] \[h\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+omit_from_output="y"
+regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/holder.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add holder=%0")</send>
+  if "%4"=="" then
+   Execute("history_add all=[holders] %2 %6 the channel.")
+   Execute("history_add holders=%2 %6 the channel.")
+   Note("[holders] %2 %6 the channel.")
+  else
+   Execute("history_add all=[holders] %2: %5")
+   Execute("history_add holders=%2: %5")
+   Note("[holders] %2: %5")
+end </send>
   </trigger>
   <trigger
    enabled="y"
@@ -5815,13 +5859,16 @@ Execute("history_add holder=%0")</send>
   <trigger
    enabled="y"
    group="com"
-   match="You text * to * on your wristpad."
-   send_to="12"
+   match="^You text (.*) to (.*) on your wristpad.$"
+omit_from_output="y"
+regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/reply.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add page=%0")</send>
+Execute("history_add all=page to %2: %1")
+Execute("history_add page=to %2: %1")
+Note("You page to %2: %1") </send>
   </trigger>
   <trigger
    enabled="y"
@@ -5993,13 +6040,22 @@ Execute("history_add mailnet=%0")</send>
   <trigger
    enabled="y"
    group="com"
-   match="[ * ] [b]:*"
-   send_to="12"
+   match="^\[ (.+) \] \[b\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+   omit_from_output="y"
+  regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/board.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add board=%0")</send>
+  if "%4"=="" then
+   Execute("history_add all=[board] %2 %6 the channel.")
+   Execute("history_add board=%2 %6 the channel.")
+   Note("[board] %2 %6 the channel.")
+  else
+   Execute("history_add all=[board] %2: %5")
+   Execute("history_add board=%2: %5")
+   Note("[board] %2: %5")
+  end </send>
   </trigger>
   <trigger
    enabled="y"
