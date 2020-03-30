@@ -298,7 +298,7 @@ Execute("history_add chatnet=%0")</send>
    send_to="12"
    sequence="100"
   >
-  <send>ppi.play(path.."com/%1.ogg",0,0,Gv)
+  <send>ppi.play(path.."com/corp.ogg",0,0,Gv)
 Execute("history_add all=%0")
 Execute("history_add %1=%0")</send>
   </trigger>
