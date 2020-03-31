@@ -5103,7 +5103,8 @@ Execute("jerk pole")</send>
    send_to="12"
    sequence="100"
   >
-  <send>ppi.play(path.."player/connect.ogg",0,0,Gv)</send>
+  <send>
+ppi.play(path.."player/connect.ogg",0,0,Gv)</send>
   </trigger>
   <trigger
    enabled="y"
@@ -6231,6 +6232,9 @@ AcceleratorTo("f5", "adjust_vol(-5)", 12)
 AcceleratorTo("f6", "adjust_vol(5)", 12)
 AcceleratorTo("f7", "cycle_volume_options()", 12)
 Accelerator("shift+enter", "power")
+function OnPluginInstall()
+  load_vols()
+end -- func
 function get_vols() -- returns an integer-indexed table with all three volumes at their current rate
 gen, mus, amb = Gv, Mv, Av
 return {gen, mus, amb}
