@@ -104,6 +104,21 @@ Execute("history_add shopkeep=%0")</send>
   </trigger>
   <trigger
    enabled="y"
+   match=".* switches (on|off) (his|her) .*? (light|lantern)"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>if "%1" == "on" then
+ppi.play(path.."inv/light_on.ogg", 0, 0, Gv)
+elseif "%1" == "off" then
+ppi.play(path.."inv/light_off.ogg", 0, 0, Gv)
+else
+return
+end</send>
+  </trigger>
+  <trigger
+   enabled="y"
    group="script"
    match="Your pronouns:*he,*,*"
    send_to="12"
