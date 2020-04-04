@@ -6142,6 +6142,17 @@ Execute("history_add mailnet=%0")</send>
   <send>ppi.play(path.."inv/cig_out.ogg", 0, 0, Gv)</send>
   </trigger>
 
+  <trigger
+   enabled="y"
+   group="com"
+   match="^\[\s*\w+\s*\]: \w+ was killed by .* in .*\.$"
+   regexp="y"
+   send_to="12"
+   sequence="50"
+  >
+  <send>ppi.play(path.."com/corp_death.ogg", 0, 0, Gv)</send>
+  </trigger>
+
 </triggers>
 
 <!--  Aliases  -->
