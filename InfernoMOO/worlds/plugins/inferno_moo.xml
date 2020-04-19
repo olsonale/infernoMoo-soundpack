@@ -6332,6 +6332,7 @@ AcceleratorTo("f5", "adjust_vol(-5)", 12)
 AcceleratorTo("f6", "adjust_vol(5)", 12)
 AcceleratorTo("f7", "cycle_volume_options()", 12)
 Accelerator("shift+enter", "power")
+Accelerator("ctrl+shift+enter", "feint")
 function OnPluginInstall()
   load_vols()
 end -- func
