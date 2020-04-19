@@ -180,14 +180,22 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[zotnet\] (.+) says, \&quot;(.*)\&quot;$"
+   match="^\[zotnet\] (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
+omit_from_output="y"
    regexp="y"
-   send_to="12"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/zot.ogg",0,0,Gv)
-Execute("history_add all=zotnet %1: %2")
-Execute("history_add zotnet=%1: %2")</send>
+if "%3"=="" then
+   Execute("history_add all=[zotnet] %1 %5 the channel.")
+   Execute("history_add zotnet=%1 %5 the channel.")
+   Note("[zotnet] %1 %5 the channel.")
+  else
+   Execute("history_add all=[zotnet] %1: %4")
+   Execute("history_add zotnet=%1: %4")
+   Note("[zotnet] %1: %4")
+end</send>
   </trigger>
   <trigger
    enabled="y"
@@ -337,13 +345,23 @@ end </send>
   <trigger
    enabled="y"
    group="com"
-   match="[ * ]:* &quot;*"
-   send_to="12"
+   match="\[ (.+) \]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the channel)$"
+omit_from_output="y"
+regexp="y"
+   send_to="14"
    sequence="100"
   >
   <send>ppi.play(path.."com/corp.ogg",0,0,Gv)
-Execute("history_add all=%0")
-Execute("history_add %1=%0")</send>
+  if "%4"=="" then
+   Execute("history_add all=[%1] %2 %6 the channel.")
+   Execute("history_add %1=%2 %6 the channel.")
+   Note("[%1] %2 %6 the channel.")
+  else
+   Execute("history_add all=[%1] %2: %5")
+   Execute("history_add %1=%2: %5")
+   Note("[%1] %2: %5")
+  end
+</send>
   </trigger>
   <trigger
    enabled="y"
@@ -1260,8 +1278,8 @@ regexp="y"
   >
   <send>ppi.play(path.."com/page.ogg",0,0,Gv)
 Execute("history_add all=page from %2: %3")
-Execute("history_add page=from %2: %3")</send>
-Note("page from %2: %3")
+Execute("history_add page=from %2: %3")
+Note("page from %2: %3")</send>
   </trigger>
   <trigger
    enabled="y"
