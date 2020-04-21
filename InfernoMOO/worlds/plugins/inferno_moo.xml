@@ -37,6 +37,18 @@ This plugin was initially developed by Chariot on InfernoMOO, and is now being m
 <triggers>
   <trigger
    enabled="y"
+   keep_evaluating="y"
+   match="^(.+) \((.+)\)   ((\d){1,2}:(\d){2}(am|pm)?)$"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>roomname="%1"
+areaname="%2"</send>
+  </trigger>
+
+  <trigger
+   enabled="y"
    group="areas"
    match="^(.*?) \((.*?)ben horst (.*?)\)   (.*?)$"
    regexp="y"
@@ -6163,14 +6175,26 @@ Execute("history_add mailnet=%0")</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[\s*\w+\s*\]: \w+ was killed by .* in .*\.$"
+   match="^\[\s*\w+\s*\]: (\w+ was killed by .* in .*\.)$"
    regexp="y"
    send_to="12"
    sequence="50"
   >
-  <send>ppi.play(path.."com/corp_death.ogg", 0, 0, Gv)</send>
+  <send>ppi.play(path.."com/corp_death.ogg",0,0,Gv)
+Execute("history_add all=%0")
+Execute("history_add corpdeath=%1")</send>
   </trigger>
-
+  <trigger
+   enabled="y"
+   group="com"
+   match="^(.+) (says|asks|exclaims), &quot;(.+)&quot;$"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Execute("history_add all=%0")
+Execute("history_add say=%0")</send>
+  </trigger>
 </triggers>
 
 <!--  Aliases  -->
