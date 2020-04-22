@@ -110,7 +110,7 @@ end</send>
    omit_from_output="y"
 regexp="y"
    send_to="14"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/shopkeep.ogg",0,0,Gv)
 if "%4"=="" then
@@ -196,7 +196,7 @@ end</send>
 omit_from_output="y"
    regexp="y"
    send_to="14"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/zot.ogg",0,0,Gv)
 if "%3"=="" then
@@ -244,7 +244,7 @@ ppi.play(path.."npcs/%4/grunts/"..math.random(1,4)..".ogg",0,0,Gv)</send>
 omit_from_output="y"
 regexp="y"
    send_to="14"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/manager.ogg",0,0,Gv)
   if "%4"=="" then
@@ -322,7 +322,7 @@ end</send>
 omit_from_output="y"
    regexp="y"
    send_to="14"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/chatnet.ogg",0,0,Gv)
 if "%3"=="" then
@@ -361,7 +361,7 @@ end </send>
 omit_from_output="y"
 regexp="y"
    send_to="14"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/corp.ogg",0,0,Gv)
   if "%4"=="" then
@@ -1406,7 +1406,7 @@ ppi.play(path.."combat/gun/5.ogg",0,0,Gv)</send>
    match="^\[tradenet\] (.+) says, \&quot;(.*)\&quot;$"
 regexp="y"
    send_to="12"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/tradenet.ogg",0,0,Gv)
 Execute("history_add all=[tradenet] %1: %2")
@@ -5880,7 +5880,7 @@ ppi.play(path.."npcs/%4/grunts/"..math.random(2,4)..".ogg",0,0,Gv)</send>
 omit_from_output="y"
 regexp="y"
    send_to="14"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/holder.ogg",0,0,Gv)
   if "%4"=="" then
@@ -6090,7 +6090,7 @@ Execute("history_add mailnet=%0")</send>
    omit_from_output="y"
   regexp="y"
    send_to="14"
-   sequence="100"
+   sequence="50"
   >
   <send>ppi.play(path.."com/board.ogg",0,0,Gv)
   if "%4"=="" then
@@ -6178,7 +6178,7 @@ Execute("history_add mailnet=%0")</send>
    match="^\[\s*\w+\s*\]: (\w+ was killed by .* in .*\.)$"
    regexp="y"
    send_to="12"
-   sequence="50"
+   sequence="25"
   >
   <send>ppi.play(path.."com/corp_death.ogg",0,0,Gv)
 Execute("history_add all=%0")
