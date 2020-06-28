@@ -5037,7 +5037,7 @@ Execute("reel")</send>
   <trigger
    enabled="y"
    group="moves"
-   match="You head up the stairs."
+   match="You head * the stairs."
    send_to="12"
    sequence="100"
   >
