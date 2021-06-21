@@ -106,7 +106,7 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[ (.+) \] \[s\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+   match="^\[ (.+) \] \[s\]: (.+) ((says|asks|exclaims|roars), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
    omit_from_output="y"
 regexp="y"
    send_to="14"
@@ -192,7 +192,7 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[zotnet\] (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
+   match="^\[zotnet\] (.+) ((says|asks|exclaims|roars), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
 omit_from_output="y"
    regexp="y"
    send_to="14"
@@ -240,7 +240,7 @@ ppi.play(path.."npcs/%4/grunts/"..math.random(1,4)..".ogg",0,0,Gv)</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[ (.+) \] \[m\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+   match="^\[ (.+) \] \[m\]: (.+) ((says|asks|exclaims|roars), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
 omit_from_output="y"
 regexp="y"
    send_to="14"
@@ -318,7 +318,7 @@ end</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[chatnet\] (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
+   match="^\[chatnet\] (.+) ((says|asks|exclaims|roars), \&quot;(.*)\&quot;|has (joined|left) (.+))$"
 omit_from_output="y"
    regexp="y"
    send_to="14"
@@ -357,7 +357,7 @@ end </send>
   <trigger
    enabled="y"
    group="com"
-   match="\[ (.+) \]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the channel)$"
+   match="\[ (.+) \]: (.+) ((says|asks|exclaims|roars), \&quot;(.*)\&quot;|(joined|left) the channel)$"
 omit_from_output="y"
 regexp="y"
    send_to="14"
@@ -5876,7 +5876,7 @@ ppi.play(path.."npcs/%4/grunts/"..math.random(2,4)..".ogg",0,0,Gv)</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[ (.+) \] \[h\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+   match="^\[ (.+) \] \[h\]: (.+) ((says|asks|exclaims|roars), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
 omit_from_output="y"
 regexp="y"
    send_to="14"
@@ -6086,7 +6086,7 @@ Execute("history_add mailnet=%0")</send>
   <trigger
    enabled="y"
    group="com"
-   match="^\[ (.+) \] \[b\]: (.+) ((says|asks|exclaims), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
+   match="^\[ (.+) \] \[b\]: (.+) ((says|asks|exclaims|roars), \&quot;(.*)\&quot;|(joined|left) the (.+) channel.)$"
    omit_from_output="y"
   regexp="y"
    send_to="14"
@@ -6187,7 +6187,7 @@ Execute("history_add corpdeath=%1")</send>
   <trigger
    enabled="y"
    group="com"
-   match="^(.+) (says|asks|exclaims), &quot;(.+)&quot;$"
+   match="^(.+) (says|asks|exclaims|roars), &quot;(.+)&quot;$"
    regexp="y"
    send_to="12"
    sequence="100"
