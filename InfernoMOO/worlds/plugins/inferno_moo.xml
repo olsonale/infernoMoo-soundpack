@@ -125,7 +125,7 @@ end</send>
   </trigger>
   <trigger
    enabled="y"
-   match=".* switches (on|off) (his|her) .*? (light|lantern)"
+   match=".* switches (on|off) (his|her|its) .*? (light|lantern)"
    regexp="y"
    send_to="12"
    sequence="100"
