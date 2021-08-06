@@ -6192,7 +6192,8 @@ Execute("history_add corpdeath=%1")</send>
    send_to="12"
    sequence="100"
   >
-  <send>Execute("history_add all=%0")
+  <send>ppi.play(path.."com/say.ogg",0,0,Gv)
+Execute("history_add all=%0")
 Execute("history_add say=%0")</send>
   </trigger>
 </triggers>
